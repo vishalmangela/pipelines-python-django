@@ -1,4 +1,11 @@
 # Python Django
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Dev-to-Azure_Service_Connection'
+    appType: 'webAppLinux'
+    appName: 'DemoApp'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'TOMCAT|9.0-jre8'
 # Test a Django project on multiple versions of Python.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
